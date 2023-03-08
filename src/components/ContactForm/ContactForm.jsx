@@ -23,6 +23,7 @@ export const ContactForm = () => {
     );
     if (dublicate) {
       alert(`${name} is already in your contact list`);
+      setState({ name: '', number: '' });
       return;
     }
     dispatch(addNewContact(state));
